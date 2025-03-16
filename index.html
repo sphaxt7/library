@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Library</title>
+</head>
+<body>
+    <header><h1>Library</h1></header>
+    <main>
+        <button id="add-book-btn">+ Add Book</button>
+        <div class="book-card-grid">
+        </div>
+    </main>
+    <footer><p>Copyright &copy; 2025 sphaxt7 - GitHub</p></footer>
+    <dialog id="modal">
+        <form id="book-form" method="dialog">
+            <h3>Add a new book</h3>  
+            <input type="text" placeholder="Title" id="title"   maxlength="30" required>
+            <input type="text" id="author" placeholder="Author" maxlength="30" required>
+            <input type="text" id="pages" placeholder="Pages" maxlength="30" required>
+            <div id="checkbox-div">
+                <label for="completed">Have you read it?</label>
+                <input type="checkbox" id="completed">
+            </div>
+            <input type="submit" formmethod="dialog" id="submit-btn">
+        </form>
+    </dialog>
+</body>
+</html>
