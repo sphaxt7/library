@@ -80,8 +80,8 @@ bookForm.addEventListener('submit', (e) => {
 })
 
 
-const theHobbit = new Book("The Hobbit", "Tolkien", 245, false);
-const theHobbit2 = new Book("The Hobbit 2", "Tolkien", 300, true);
+const theHobbit = new Book("The Hobbit", "J.R.R. Tolkien", 300, false);
+const theStranger = new Book("The Stranger", "Albert Camus", 130, true);
 myLibrary.push(theHobbit);
-myLibrary.push(theHobbit2);
+myLibrary.push(theStranger);
 createCard();
