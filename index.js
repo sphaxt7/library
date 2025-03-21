@@ -1,14 +1,13 @@
 let myLibrary = [];
 
-function Book(title, author, pages, is_read) {
-	if (!new.target) {
-		throw Error("you must use the 'new' keywoard to create this object");
-  	}
+class Book {
+	constructor(title, author, pages, is_read) {
+		this.title = `"${title}"`;
+		this.author = author;
+		this.pages = `${pages} pages`;
+		this.is_read = is_read ? "Read" : "Not read";
+	}
 
-	this.title = `"${title}"`;
-	this.author = author;
-	this.pages = `${pages} pages`;
-	this.is_read = is_read ? "Read" : "Not read";
 }
 
 function addBookToLibrary() {
@@ -19,7 +18,6 @@ function addBookToLibrary() {
 	
 	const myBook = new Book(title, author, pages, completed);
 	myLibrary.push(myBook);
-	// console.log(...myLibrary);
 	createCard()
 	
 }
@@ -43,6 +41,7 @@ function createCard() {
 		is_read.style.backgroundColor = myBook.is_read === "Read" ? "#8fe58c" : "#e58c8c";
 
 		is_read.addEventListener('click', (e) => {
+			myLibrary[index].is_read = myLibrary[index].is_read === "Read" ? "Not read" : "Read";
 			is_read.textContent = is_read.textContent === "Read" ? "Not read" : "Read";
 			is_read.style.backgroundColor = is_read.textContent === "Read" ? "#8fe58c" : "#e58c8c";
 		})
